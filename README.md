@@ -14,7 +14,9 @@ Utilizar Git e GitHub para versionamento, garantindo rastreabilidade e colabora�
 🛠️ Estrutura do Repositório
 
 sql/schema.sql → Estrutura das tabelas (modelo físico do banco).
+
 sql/insert.sql → Inserções de dados para testes.
+
 sql/queries.sql → Consultas SQL para relatórios e análises.
 
 README.md → Documentação do projeto.

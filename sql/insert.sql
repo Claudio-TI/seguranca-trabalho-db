@@ -1,4 +1,4 @@
--- Inserções de exemplo
+
 
 INSERT INTO Funcionario (nome, cargo, setor) VALUES 
 ('Maria Silva', 'Engenheira', 'Produção'),

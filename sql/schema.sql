@@ -1,4 +1,3 @@
--- Criação das tabelas principais do sistema de segurança do trabalho
 
 CREATE TABLE Funcionario (
     id INT PRIMARY KEY AUTO_INCREMENT,

@@ -1,9 +1,8 @@
--- Consultas de exemplo
 
--- Listar todos os funcionários
+
 SELECT * FROM Funcionario;
 
--- Consultar treinamentos vencidos
+
 SELECT f.nome, t.titulo, c.data_validade
 FROM Certificacao c
 JOIN Funcionario f ON c.funcionario_id = f.id

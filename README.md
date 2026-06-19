@@ -1,10 +1,12 @@
 Sistema de Gestão de Segurança do Trabalho
 
 📘 Sobre o Projeto
+
 Este repositório contém o desenvolvimento do Sistema de Gestão de Segurança do Trabalho, criado como parte do Projeto Integrador de Tecnologia da Informação II (UFMS Digital). O sistema utiliza banco de dados relacional e controle de versão com Git para organizar informações relacionadas à segurança ocupacional, como treinamentos, certificações e ocorrências.
 
 
 🎯 Objetivos
+
 Desenvolver um banco de dados relacional para gestão de informações de segurança do trabalho.
 
 Implementar consultas SQL que permitam relatórios de treinamentos, inspeções e ocorrências.

@@ -14,6 +14,7 @@ Implementar consultas SQL que permitam relatórios de treinamentos, inspeções 
 Utilizar Git e GitHub para versionamento, garantindo rastreabilidade e colaboração.
 
 🛠️ Estrutura do Repositório
+
 sql/schema.sql → Estrutura das tabelas (modelo físico do banco).
 
 sql/insert.sql → Inserções de dados para testes.
@@ -25,36 +26,8 @@ README.md → Documentação do projeto.
 📊 Diagrama Entidade-Relacionamento (DER)
 O sistema foi modelado com quatro entidades principais: Funcionário, Treinamento, Certificação e Ocorrência.
 
-text
-+------------------+         +------------------+
-|   Funcionario    |         |   Treinamento    |
-|------------------|         |------------------|
-| id (PK)          |         | id (PK)          |
-| nome             |         | titulo           |
-| cargo            |         | descricao        |
-| setor            |         | validade         |
-+------------------+         +------------------+
-         |                           |
-         |         +------------------+
-         |         |   Certificacao   |
-         |---------|------------------|
-         |         | id (PK)          |
-         |         | funcionario_id(FK) -> Funcionario.id
-         |         | treinamento_id(FK) -> Treinamento.id
-         |         | data_conclusao    |
-         |         | data_validade     |
-         |         +------------------+
-         |
-+------------------+
-|   Ocorrencia     |
-|------------------|
-| id (PK)          |
-| funcionario_id(FK) -> Funcionario.id
-| tipo             |
-| descricao        |
-| data             |
-+------------------+
 🚀 Como Executar
+
 Clone o repositório:
 
 bash

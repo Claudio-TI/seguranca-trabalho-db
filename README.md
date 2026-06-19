@@ -1,48 +1,62 @@
-📑 Guia Executivo — Sistema de Gestão de Segurança do Trabalho
-🌐 Contexto
-Projeto acadêmico desenvolvido no Programa de Extensão UFMS Digital (95DX7.200525) — Semestre 2026.1, como parte da disciplina Projeto Integrador de Tecnologia da Informação II.
+Sistema de Gestão de Segurança do Trabalho
+📘 Sobre o Projeto
+Este repositório contém o desenvolvimento do Sistema de Gestão de Segurança do Trabalho, criado como parte do Projeto Integrador de Tecnologia da Informação II (UFMS Digital). O sistema utiliza banco de dados relacional e controle de versão com Git para organizar informações relacionadas à segurança ocupacional, como treinamentos, certificações e ocorrências.
 
-👤 Autor
-Acadêmico: Cláudio Santos de Azevedo
-Curso: Superior em Tecnologia da Informação
+🎯 Objetivos
+Desenvolver um banco de dados relacional para gestão de informações de segurança do trabalho.
 
-🎯 Objetivo
-Criar um sistema de banco de dados relacional para gestão de segurança ocupacional, permitindo:
+Implementar consultas SQL que permitam relatórios de treinamentos, inspeções e ocorrências.
 
-Registro de funcionários, treinamentos e certificações.
+Utilizar Git e GitHub para versionamento, garantindo rastreabilidade e colaboração.
 
-Controle de ocorrências relacionadas ao ambiente de trabalho.
+🛠️ Estrutura do Repositório
+sql/schema.sql → Estrutura das tabelas (modelo físico do banco).
 
-Consultas e relatórios para apoio à tomada de decisão.
+sql/insert.sql → Inserções de dados para testes.
 
-🛠️ Tecnologias
-SQL Relacional: modelagem, criação de tabelas e consultas.
+sql/queries.sql → Consultas SQL para relatórios e análises.
 
-DER (Diagrama Entidade-Relacionamento): estrutura lógica do banco.
+README.md → Documentação do projeto.
 
-Git/GitHub: versionamento e colaboração.
+📊 Diagrama Entidade-Relacionamento (DER)
+O sistema foi modelado com quatro entidades principais: Funcionário, Treinamento, Certificação e Ocorrência.
 
-Boas práticas de normalização: integridade e consistência dos dados.
-
-📊 Principais Entidades
-Funcionário
-
-Treinamento
-
-Certificação
-
-Ocorrência
-
-⚙️ Execução Local
+text
++------------------+         +------------------+
+|   Funcionario    |         |   Treinamento    |
+|------------------|         |------------------|
+| id (PK)          |         | id (PK)          |
+| nome             |         | titulo           |
+| cargo            |         | descricao        |
+| setor            |         | validade         |
++------------------+         +------------------+
+         |                           |
+         |         +------------------+
+         |         |   Certificacao   |
+         |---------|------------------|
+         |         | id (PK)          |
+         |         | funcionario_id(FK) -> Funcionario.id
+         |         | treinamento_id(FK) -> Treinamento.id
+         |         | data_conclusao    |
+         |         | data_validade     |
+         |         +------------------+
+         |
++------------------+
+|   Ocorrencia     |
+|------------------|
+| id (PK)          |
+| funcionario_id(FK) -> Funcionario.id
+| tipo             |
+| descricao        |
+| data             |
++------------------+
+🚀 Como Executar
 Clone o repositório:
 
 bash
 git clone https://github.com/Claudio-TI/seguranca-trabalho-db.git
-cd seguranca-trabalho-db
-Execute os scripts SQL:
+Importe o arquivo schema.sql em seu SGBD (MySQL, PostgreSQL ou outro compatível).
 
-schema.sql → estrutura do banco
+Execute insert.sql para popular o banco com dados de teste.
 
-insert.sql → dados de teste
-
-queries.sql → consultas e relatórios
+Utilize queries.sql para gerar relatórios e consultas.

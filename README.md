@@ -8,17 +8,13 @@ Este repositório contém o desenvolvimento do Sistema de Gestão de Segurança 
 🎯 Objetivos
 
 Desenvolver um banco de dados relacional para gestão de informações de segurança do trabalho.
-
 Implementar consultas SQL que permitam relatórios de treinamentos, inspeções e ocorrências.
-
 Utilizar Git e GitHub para versionamento, garantindo rastreabilidade e colaboração.
 
 🛠️ Estrutura do Repositório
 
 sql/schema.sql → Estrutura das tabelas (modelo físico do banco).
-
 sql/insert.sql → Inserções de dados para testes.
-
 sql/queries.sql → Consultas SQL para relatórios e análises.
 
 README.md → Documentação do projeto.
@@ -33,7 +29,5 @@ Clone o repositório:
 bash
 git clone https://github.com/Claudio-TI/seguranca-trabalho-db.git
 Importe o arquivo schema.sql em seu SGBD (MySQL, PostgreSQL ou outro compatível).
-
 Execute insert.sql para popular o banco com dados de teste.
-
 Utilize queries.sql para gerar relatórios e consultas.
